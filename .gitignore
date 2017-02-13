@@ -1,0 +1,8 @@
+node_modules/
+public
+npm-debug.log
+.gatsby-context.js
+logs
+.config/
+# Misc
+.DS_Store

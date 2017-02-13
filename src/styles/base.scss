@@ -1,0 +1,35 @@
+@import "./fonts/roboto.css";
+@import "./fonts/fabricmdl2icons.css";
+@import "~office-ui-fabric-react/dist/sass/Fabric.scss";
+
+body {
+  color: #555;
+  font-weight: 400;
+  text-align: left;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  font: 16px/1.8 'Microsoft YaHei', Arial;
+}
+.Roboto--loaded {
+  body {
+    font: 16px/1.8 'Roboto', 'Microsoft YaHei', Arial;
+  }
+}
+.header, h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  color: #333;
+}
+a {
+  color: #f66;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  &:hover, &:active {
+    color: #f33;
+    outline-width: 0;
+    border-bottom-color: #f33;
+  }
+}
+p {
+  margin: 1.6em 0;
+}

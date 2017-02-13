@@ -1,0 +1,54 @@
+{
+  "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "classes": true,
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "commonjs": true,
+    "node": true
+  },
+  "plugins": [
+    "react",
+    "babel"
+  ],
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "rules": {
+    "react/no-danger": 0,
+    "react/prop-types": 0,
+    "react/jsx-uses-vars": 1,
+    "react/prefer-stateless-function": [0],
+    "react/jsx-filename-extension": 0,
+    "babel/object-shorthand": 1,
+    "babel/generator-star-spacing": [1, "after"],
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": [0],
+    "import/extensions": 0,
+    "class-methods-use-this": [2, {
+      "exceptMethods": [
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentWillMount",
+        "componentWillReceiveProps",
+        "componentWillUnmount",
+        "componentWillUpdate",
+        "render",
+        "shouldComponentUpdate"
+      ]
+    }],
+    "quotes": [2, "single"],
+    "comma-dangle": [2, "never"],
+    "no-unused-expressions": 0,
+    "jsx-a11y/no-static-element-interactions": 0
+  },
+  "globals": {
+    "__PREFIX_LINKS__": true
+  },
+}

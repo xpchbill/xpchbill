@@ -1,0 +1,18 @@
+.article-list {
+  h3 {
+    margin: 0;
+  }
+  &-item {
+    margin-bottom: 50px;
+    p {
+      margin: 0;
+    }
+  }
+  .post-body {
+    margin: 10px 0;
+  }
+  .post-author-date {
+    color: #999;
+    font-style: italic;
+  }
+}
