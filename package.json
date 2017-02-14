@@ -5,7 +5,8 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -p 3000",
+    "start": "gatsby develop -p 3000",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "post": "babel-node ./scripts/newpost.js",
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
@@ -39,6 +40,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "gh-pages": "^0.12.0",
     "js-yaml": "^3.8.1",
     "mkdirp": "^0.5.1",
@@ -54,6 +56,7 @@
     "gatsby": "^0.12.34",
     "highlight.js": "^9.9.0",
     "history": "^3.2.0",
+    "load-themed-styles": "^1.2.0",
     "lodash": "^4.17.4",
     "markdown-it": "^8.2.2",
     "markdown-it-abbr": "^1.0.4",
