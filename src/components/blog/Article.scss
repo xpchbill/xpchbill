@@ -1,8 +1,12 @@
 .article {
   &-container {
     margin: 0 auto;
+    > h1 {
+      color: #f66;
+      line-height: 1.3em;
+    }
   }
   &-body {
-    max-width: 600px;
+    max-width: 800px;
   }
 }

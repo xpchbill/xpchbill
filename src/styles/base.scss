@@ -8,11 +8,11 @@ body {
   text-align: left;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
-  font: 16px/1.8 'Microsoft YaHei', Arial;
+  font: 16px/1.6 Arial, 'Microsoft YaHei';
 }
 .Roboto--loaded {
   body {
-    font: 16px/1.8 'Roboto', 'Microsoft YaHei', Arial;
+    font: 16px/1.8 'Roboto', Arial, 'Microsoft YaHei';
   }
 }
 .header, h1, h2, h3, h4, h5, h6 {
