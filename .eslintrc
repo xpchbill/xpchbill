@@ -28,6 +28,7 @@
     "react/jsx-filename-extension": 0,
     "babel/object-shorthand": 1,
     "babel/generator-star-spacing": [1, "after"],
+    "import/no-extraneous-dependencies": 0,
     "import/no-named-as-default": 0,
     "import/no-unresolved": [0],
     "import/extensions": 0,

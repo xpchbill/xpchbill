@@ -3,7 +3,7 @@ title: Office UI Fabric for iOS
 date: '2017-02-14T08:48:36.108Z'
 layout: post
 draft: true
-place: blog
+place: blog2
 tags:
   - blog
   - .md

@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { StickyContainer, Sticky } from 'react-sticky';
 import ArticleList from './ArticleList';
 import ArticleCategories from './ArticleCategories';
 
 import './index.scss';
 
-export default class Blog extends React.Component {
+export class Blog extends React.Component {
   render() {
     const { pages, categories } = this.props;
 
@@ -34,3 +35,12 @@ export default class Blog extends React.Component {
     );
   }
 }
+
+export default connect(
+  state => ({
+    pages: state.blog.get('pages'),
+    categories: state.blog.get('categories')
+  }), {
+
+  }
+)(Blog);

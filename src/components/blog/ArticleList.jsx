@@ -6,19 +6,27 @@ import { config } from 'config';
 
 import './ArticleList.scss';
 
-const getArticleItem = page => (
-  <div className="article-list-item" key={page.path}>
-    <h3><Link to={page.path}>{page.data.title}</Link></h3>
-    <p className="post-author-date ms-fontSize-s">{`Posted by ${config.author} on ${page.data.date}`}</p>
-    <div className="post-body">
-      {
-        truncate(page.data.body.replace(/<[^>]*>/g, ''), {
-          length: 120, omission: ' ...', separator: /,? +/
-        })
-      }
+const getArticleItem = (page) => {
+  const path = page.get('path');
+  const data = page.get('data');
+  const title = data.get('title');
+  const date = data.get('date');
+  const body = data.get('body');
+
+  return (
+    <div className="article-list-item" key={path}>
+      <h3><Link to={path}>{title}</Link></h3>
+      <p className="post-author-date ms-fontSize-s">{`Posted by ${config.author} on ${date}`}</p>
+      <div className="post-body">
+        {
+          truncate(body.replace(/<[^>]*>/g, ''), {
+            length: 120, omission: ' ...', separator: /,? +/
+          })
+        }
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default class ArticleList extends React.Component {
 

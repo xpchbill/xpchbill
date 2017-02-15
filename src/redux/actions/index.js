@@ -1,11 +1,22 @@
-export const ADD_POSTED_PAGES = 'site/global/ADD_POSTED_PAGES';
+import { fromJS } from 'immutable';
+import { acceptBlogPagesAction } from 'components/blog/actions';
 
-export const addPostedPagesAction = (moduleName, typeName) => ({
-  type: ADD_POSTED_PAGES,
-  payload: {
-    moduleName, typeName
-  }
-});
+export const ACCEPT_BLOG_PAGES = 'site/global/ACCEPT_BLOG_PAGES';
+
+export const parsePostedPages = pages => (dispatch) => {
+  fromJS(pages).groupBy((p) => {
+    const place = p.getIn(['data', 'place']);
+    return place || 'otherPages';
+  }).forEach((_pages, place) => {
+    switch (place) {
+      case 'blog':
+        dispatch(acceptBlogPagesAction(_pages));
+        break;
+      default:
+        break;
+    }
+  });
+};
 
 export const testAction = () => {
 

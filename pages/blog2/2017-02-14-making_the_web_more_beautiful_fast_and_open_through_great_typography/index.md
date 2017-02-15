@@ -3,7 +3,7 @@ title: 'Making the web more beautiful, fast, and open through great typography'
 date: '2017-02-14T08:35:03.764Z'
 layout: post
 draft: true
-place: blog
+place: blog2
 tags:
   - blog
   - .md

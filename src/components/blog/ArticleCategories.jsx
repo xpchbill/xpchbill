@@ -7,7 +7,7 @@ export default class ArticleCategories extends React.Component {
   render() {
     const { categories } = this.props;
 
-    return (
+    return categories ? (
       <div className="article-categories">
         <h2>Categories</h2>
         {
@@ -21,6 +21,6 @@ export default class ArticleCategories extends React.Component {
         }
 
       </div>
-    );
+    ) : null;
   }
 }

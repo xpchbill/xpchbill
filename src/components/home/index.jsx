@@ -7,15 +7,9 @@ import DocumentTitle from 'react-document-title';
 import { config } from 'config';
 /* eslint-enable */
 
-import { addPostedPagesAction } from 'redux/actions';
-
 import '../../styles/base.scss';
 
 export class Home extends React.Component {
-
-  componentDidMount() {
-
-  }
 
   render() {
     return (
@@ -38,8 +32,7 @@ export class Home extends React.Component {
     );
   }
 }
+
 export default connect(
-  null, {
-    addPostedPagesAction
-  }
+  null, {}
 )(Home);

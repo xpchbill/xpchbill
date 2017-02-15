@@ -22,6 +22,7 @@ prompt.get(['title'], (err, result) => {
     date: moment().toJSON(),
     layout: 'post',
     draft: true,
+    place: 'blog',
     tags: ['blog', '.md'],
     categories: null,
     coverPhoto: null
