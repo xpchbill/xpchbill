@@ -1,7 +1,12 @@
 import path from 'path';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 exports.modifyWebpackConfig = (webpackConfig, env) => {
+  webpackConfig.merge({
+    resolve: {
+      modulesDirectories: ['src']
+    }
+  });
+
   webpackConfig.loader('source-map-loader', (cfg) => {
     const config = cfg;
     config.test = /\.js$/;

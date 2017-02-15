@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import Article from '../src/components/blog/Article';
 
-import '../src/styles/markdown-styles.less';
+import '../src/styles/markdown.scss';
 
 export default class MarkdownWrapper extends React.Component {
   render() {

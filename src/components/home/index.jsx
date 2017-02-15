@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
 /* eslint-disable */
 import { prefixLink } from 'gatsby-helpers';
@@ -6,9 +7,16 @@ import DocumentTitle from 'react-document-title';
 import { config } from 'config';
 /* eslint-enable */
 
+import { addPostedPagesAction } from 'redux/actions';
+
 import '../../styles/base.scss';
 
-export default class Home extends React.Component {
+export class Home extends React.Component {
+
+  componentDidMount() {
+
+  }
+
   render() {
     return (
       <DocumentTitle title={config.siteTitle}>
@@ -30,3 +38,8 @@ export default class Home extends React.Component {
     );
   }
 }
+export default connect(
+  null, {
+    addPostedPagesAction
+  }
+)(Home);
