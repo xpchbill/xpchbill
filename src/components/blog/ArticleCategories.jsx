@@ -1,21 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Checkbox } from 'office-ui-fabric-react/lib/Checkbox';
+
+import { onCategoryChangeAction } from './actions';
 
 import './ArticleCategories.scss';
 
-export default class ArticleCategories extends React.Component {
+export class ArticleCategories extends React.PureComponent {
   render() {
     const { categories } = this.props;
-
+// debugger;
     return categories ? (
       <div className="article-categories">
         <h2>Categories</h2>
         {
-          categories.map(cat =>
+          categories.map((cat, index) =>
             <Checkbox
-              label={cat}
-              key={cat}
-              defaultChecked={true}
+              label={cat.get('name')}
+              key={cat.get('name')}
+              checked={cat.get('selected')}
+              onChange={(e, selected) => this.props.onCategoryChangeAction(index, selected)}
             />
           )
         }
@@ -24,3 +28,9 @@ export default class ArticleCategories extends React.Component {
     ) : null;
   }
 }
+
+export default connect(
+  null, {
+    onCategoryChangeAction
+  }
+)(ArticleCategories);

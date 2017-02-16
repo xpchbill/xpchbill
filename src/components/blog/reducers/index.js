@@ -2,7 +2,8 @@ import { fromJS } from 'immutable';
 import reducerHandler from 'redux/utils/reducerHandler';
 
 import {
-  ACCEPT_BLOG_PAGES
+  ACCEPT_BLOG_PAGES,
+  ON_CATEGORY_CHANGE
 } from '../actions';
 
 const initialState = fromJS({
@@ -20,7 +21,13 @@ const handlers = {
         const date = page.getIn(['data', 'date']);
         return date;
       }).reverse());
-      s.set('categories', categories);
+      s.set('categories', categories.map(cat => fromJS({ name: cat, selected: true })));
+    });
+  },
+
+  [ON_CATEGORY_CHANGE](state, { payload: { index, selected } }) {
+    return state.withMutations((s) => {
+      s.setIn(['categories', index, 'selected'], selected || false);
     });
   }
 

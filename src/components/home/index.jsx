@@ -6,8 +6,13 @@ import { prefixLink } from 'gatsby-helpers';
 import DocumentTitle from 'react-document-title';
 import { config } from 'config';
 /* eslint-enable */
+import { loadTheme } from '@microsoft/load-themed-styles/lib/index';
 
 import '../../styles/base.scss';
+
+loadTheme({
+  themePrimary: '#f66'
+});
 
 export class Home extends React.Component {
 

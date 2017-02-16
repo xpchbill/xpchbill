@@ -6,7 +6,7 @@ import ArticleCategories from './ArticleCategories';
 
 import './index.scss';
 
-export class Blog extends React.Component {
+export class Blog extends React.PureComponent {
   render() {
     const { pages, categories } = this.props;
 
@@ -16,7 +16,7 @@ export class Blog extends React.Component {
           <div className="blog-main ms-Grid">
             <div className="ms-Grid-row">
               <div className="ms-Grid-col ms-u-sm6 ms-u-md8 ms-u-lg8">
-                <ArticleList pages={pages} />
+                <ArticleList pages={pages} categories={categories} />
               </div>
               <div className="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg4">
                 <Sticky topOffset={280}>
