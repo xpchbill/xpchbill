@@ -8,7 +8,7 @@ import { config } from 'config';
 import FontFaceObserver from 'fontfaceobserver';
 import { parsePostedPages } from 'redux/actions';
 
-export class Index extends React.Component {
+export class EntryPointTemplate extends React.Component {
 
   static propTypes = {
     children: React.PropTypes.shape().isRequired
@@ -43,4 +43,4 @@ export default connect(
   null, {
     parsePostedPages
   }
-)(Index);
+)(EntryPointTemplate);

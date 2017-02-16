@@ -4,6 +4,12 @@ import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import store, { finalHistory } from './src/redux/store';
 
+// exports.wrapRootComponent = Root => (
+//   <Provider store={store}>
+//     <Root history={finalHistory} />
+//   </Provider>
+// );
+
 exports.replaceDOMRenderer = ({ routes, onUpdate }) => (
     ReactDOM.render(// eslint-disable-line
       <Provider store={store}>
@@ -13,5 +19,5 @@ exports.replaceDOMRenderer = ({ routes, onUpdate }) => (
           onUpdate={onUpdate}
         />
       </Provider>,
-      typeof window !== 'undefined' ? document.getElementById('react-mount') : void 0)// eslint-disable-line
+      typeof window !== 'undefined' ? document.getElementById('react-mount') : null)
 );
