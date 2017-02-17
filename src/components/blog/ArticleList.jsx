@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import moment from 'moment';
 import truncate from 'lodash/truncate';
 // eslint-disable-next-line
 import { config } from 'config';
@@ -24,7 +25,7 @@ const getArticleItem = (page) => {
           }
         </div> : null
       }
-      <p className="post-author-date ms-fontSize-s">{`Posted by ${config.author} on ${date}`}</p>
+      <p className="post-author-date ms-fontSize-s">{`Posted by ${config.author} on ${moment(date).format('MMMM Do YYYY, h:mm a')}`}</p>
       <div className="post-body">
         {
           truncate(body.replace(/<[^>]*>/g, ''), {
