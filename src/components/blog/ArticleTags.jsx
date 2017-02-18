@@ -18,7 +18,7 @@ export class ArticleTags extends React.PureComponent {
             <Checkbox
               label={`${tg.get('name')} (${tg.get('count')})`}
               key={tg.get('name')}
-              disabled={tg.get('disable')}
+              disabled={tg.get('count') < 1}
               checked={tg.get('selected')}
               onChange={(e, selected) => this.props.onTagChangeAction(index, selected)}
             />
