@@ -25,7 +25,7 @@ const getArticleItem = (page) => {
           }
         </div> : null
       }
-      <p className="post-author-date ms-fontSize-s">{`Posted by ${config.author} on ${moment(date).format('MMMM Do YYYY, h:mm a')}`}</p>
+      <p className="post-author-date ms-fontSize-s">{`Posted by ${config.author} on ${moment(date).format('MMMM Do YYYY, h:mm A')}`}</p>
       <div className="post-body">
         {
           truncate(body.replace(/<[^>]*>/g, ''), {
@@ -36,20 +36,25 @@ const getArticleItem = (page) => {
     </div>
   );
 };
-
+// {
+//   pages.filter((page) => {
+//     const dataTags = page.getIn(['data', 'tags']);
+//     const dataCats = page.getIn(['data', 'categories']);
+//     return dataCats.find(cat => selectedCategoriesNames.find(c => c === cat)) &&
+//            dataTags.find(tg => selectedTagsNames.find(t => t === tg));
+//   }).map(page => getArticleItem(page))
+// }
 export default class ArticleList extends React.PureComponent {
 
   render() {
-    const { pages, categories } = this.props;
-    const selectedCategoriesNames = categories.filter(cat => cat.get('selected')).map(cat => cat.get('name'));
+    const { pages, tags, categories } = this.props;
+    // const selectedTagsNames = tags.filter(tg => tg.get('selected') && !tg.get('disable')).map(tg => tg.get('name'));
+    // const selectedCategoriesNames = categories.filter(cat => cat.get('selected')).map(cat => cat.get('name'));
 
     return (
       <div className="article-list">
         {
-          pages.filter((page) => {
-            const cats = page.getIn(['data', 'categories']);
-            return cats.find(cat => selectedCategoriesNames.find(c => c === cat));
-          }).map(page => getArticleItem(page))
+          pages.map(page => getArticleItem(page))
         }
       </div>
     );

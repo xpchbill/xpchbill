@@ -16,7 +16,7 @@ export class ArticleCategories extends React.PureComponent {
         {
           categories.map((cat, index) =>
             <Checkbox
-              label={cat.get('name')}
+              label={`${cat.get('name')} (${cat.get('count')})`}
               key={cat.get('name')}
               checked={cat.get('selected')}
               onChange={(e, selected) => this.props.onCategoryChangeAction(index, selected)}
