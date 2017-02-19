@@ -12,7 +12,7 @@ export class ArticleTags extends React.PureComponent {
 
     return tags ? (
       <div className="article-tags">
-        <h2>Tags</h2>
+        <h3>Tags:</h3>
         {
           tags.map((tg, index) =>
             <Checkbox

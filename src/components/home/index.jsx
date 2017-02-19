@@ -9,6 +9,7 @@ import { config } from 'config';
 import { loadTheme } from '@microsoft/load-themed-styles/lib/index';
 
 import '../../styles/base.scss';
+import './index.scss';
 
 loadTheme({
   themePrimary: '#f66'
@@ -19,18 +20,20 @@ export class Home extends React.Component {
   render() {
     return (
       <DocumentTitle title={config.siteTitle}>
-        <div className="page home">
-          <main>
-            <h1>
-              Bill Xiong
-            </h1>
-            <p className="tagline quoted">{config.tagLine}</p>
-            <div className="logo" />
+        <div className="page landing">
+          <nav>
             <ul className="nav">
               <li><Link to={prefixLink('/blog/')} title="Articles">Blog</Link></li>
               <li><Link to={prefixLink('/life/')} title="My life">Life</Link></li>
               <li><Link to={prefixLink('/about/')} title="About me">About</Link></li>
             </ul>
+          </nav>
+          <main>
+            <div className="main-content">
+              <img src="/xiaochun.jpeg" alt="Bill Xiong" />
+              <h1>Bill Xiong</h1>
+              <p>I build stuff. Mostly for the web.</p>
+            </div>
           </main>
         </div>
       </DocumentTitle>

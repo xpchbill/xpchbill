@@ -1,6 +1,12 @@
 .blog {
   &-main {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 650px;
   }
+}
+.ms-Panel-headerText {
+  font-weight: 500;
+}
+.fabric-categories-tags {
+  margin-top: 30px;
 }

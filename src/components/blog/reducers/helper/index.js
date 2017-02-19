@@ -9,7 +9,7 @@ export const parsePCT = (pages) => {
         const count = b.get('count');
         return a && a.get('name') === b.get('name') ? b.set('count', a.get('count') + count) : b;
       },
-        fromJS({ [cat]: { name: cat, selected: true, count: 1, disable: false } })
+        fromJS({ [cat]: { name: cat, selected: true, count: 1 } })
       );
     });
     page.getIn(['data', 'categories']).forEach((cat) => {

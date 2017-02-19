@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { StickyContainer, Sticky } from 'react-sticky';
+// import { StickyContainer, Sticky } from 'react-sticky';
+import { Button } from 'office-ui-fabric-react/lib/Button';
+import { Panel } from 'office-ui-fabric-react/lib/Panel';
+
 import ArticleList from './ArticleList';
 import ArticleCategories from './ArticleCategories';
 import ArticleTags from './ArticleTags';
@@ -8,31 +11,44 @@ import ArticleTags from './ArticleTags';
 import './index.scss';
 
 export class Blog extends React.PureComponent {
+
+  constructor() {
+    super();
+    this.state = {
+      showPanel: false
+    };
+  }
+
+  showPanel() {
+    this.setState({ showPanel: true });
+  }
+
+  closePanel() {
+    this.setState({ showPanel: false });
+  }
+
   render() {
     const { pages, tags, categories } = this.props;
 
     return (
       <div className="blog">
-        <StickyContainer>
-          <div className="blog-main ms-Grid">
-            <div className="ms-Grid-row">
-              <div className="ms-Grid-col ms-u-sm6 ms-u-md8 ms-u-lg8">
-                <ArticleList pages={pages} tags={tags} categories={categories} />
-              </div>
-              <div className="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg4">
-                <Sticky topOffset={280}>
-                  <ArticleCategories categories={categories} />
-                  <ArticleTags tags={tags} />
-                </Sticky>
-              </div>
+        <div className="blog-main">
+          <Button description="Opens the Sample Panel" onClick={() => this.showPanel()}>Open Panel</Button>
+          <Panel
+            isOpen={this.state.showPanel}
+            isLightDismiss
+            onDismiss={() => this.closePanel()}
+            headerText="Categories and Tags"
+          >
+            <div className="fabric-categories-tags">
+              <ArticleCategories categories={categories} />
+              <ArticleTags tags={tags} />
             </div>
-          </div>
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        </StickyContainer>
+          </Panel>
+          <ArticleList pages={pages} tags={tags} categories={categories} />
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     );
   }

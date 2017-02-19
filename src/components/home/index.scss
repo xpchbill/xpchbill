@@ -1,0 +1,76 @@
+.landing {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  > main {
+    position: relative;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-position: 50% 50%;
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin: 0px auto;
+    }
+    h1 {
+      color: #fff;
+    }
+    p {
+      color: #ccc;
+      margin: 0;
+      font-size: 20px;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background-size: cover;
+      background-position: inherit;
+      background-image: url(/bianfuxia.jpg);
+      image-rendering: pixelated;
+      z-index: 1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(56,62,71,0.84);
+      z-index: 2;
+    }
+  }
+  > nav {
+    order: 1;
+    flex: 1 1 100%;
+    z-index: 10;
+    .nav {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0;
+      li {
+        margin: 20px 30px;
+        font-size: 24px;
+      }
+    }
+  }
+}
