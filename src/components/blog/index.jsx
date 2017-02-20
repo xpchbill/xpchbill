@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Button } from 'office-ui-fabric-react/lib/Button';
 import { Panel } from 'office-ui-fabric-react/lib/Panel';
 
+import Cover from './Cover';
 import ArticleList from './ArticleList';
 import ArticleCategories from './ArticleCategories';
 import ArticleTags from './ArticleTags';
@@ -32,8 +33,8 @@ export class Blog extends React.PureComponent {
 
     return (
       <div className="blog">
+        <Cover className="blog-cover" src="/bianfuxia.jpg" />
         <div className="blog-main">
-          <Button description="Opens the Sample Panel" onClick={() => this.showPanel()}>Open Panel</Button>
           <Panel
             isOpen={this.state.showPanel}
             isLightDismiss
@@ -47,6 +48,7 @@ export class Blog extends React.PureComponent {
           </Panel>
           <ArticleList pages={pages} tags={tags} categories={categories} />
         </div>
+        <Button description="Opens the Sample Panel" onClick={() => this.showPanel()}>Open Panel</Button>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>

@@ -15,6 +15,7 @@
   h2, h3 {
     position: relative;
     line-height: 1.2em;
+    margin: 50px 0 0;
     &::before {
       content: "";
       border-left: 4px solid #f66;

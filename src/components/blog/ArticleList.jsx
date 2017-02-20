@@ -13,19 +13,12 @@ const getArticleItem = (page) => {
   const title = data.get('title');
   const date = data.get('date');
   const body = data.get('body');
+  const tags = data.get('tags');
   const categories = data.get('categories');
 
   return (
     <div className="article-list-item" key={path}>
-      <h3><Link to={path}>{title}</Link></h3>
-      {
-        categories.size ? <div>
-          {
-            categories.map(cat => <span className="label-blog-category" key={cat}>{cat}</span>)
-          }
-        </div> : null
-      }
-      <p className="post-author-date ms-fontSize-s">{`Posted by ${config.author} on ${moment(date).format('MMMM Do YYYY, h:mm A')}`}</p>
+      <h2><Link to={path}>{title}</Link></h2>
       <div className="post-body">
         {
           truncate(body.replace(/<[^>]*>/g, ''), {
@@ -33,24 +26,26 @@ const getArticleItem = (page) => {
           })
         }
       </div>
+      <div className="post-info ms-fontSize-s ms-Grid">
+        <div className="ms-Grid-row">
+          <div className="ms-Grid-col ms-u-lg6">
+            <span>{`时间: ${moment(date).format('YYYY-MM-DD H:MM')}`}</span>
+            <span className="post-info-split">{' | '}</span>
+            <span>{`分类: ${categories.join(',')}`}</span>
+          </div>
+          <div className="ms-Grid-col ms-u-lg6 ms-u-textAlignRight">
+            <span >{`标签: ${tags.join(', ')}`}</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
-// {
-//   pages.filter((page) => {
-//     const dataTags = page.getIn(['data', 'tags']);
-//     const dataCats = page.getIn(['data', 'categories']);
-//     return dataCats.find(cat => selectedCategoriesNames.find(c => c === cat)) &&
-//            dataTags.find(tg => selectedTagsNames.find(t => t === tg));
-//   }).map(page => getArticleItem(page))
-// }
+
 export default class ArticleList extends React.PureComponent {
 
   render() {
-    const { pages, tags, categories } = this.props;
-    // const selectedTagsNames = tags.filter(tg => tg.get('selected') && !tg.get('disable')).map(tg => tg.get('name'));
-    // const selectedCategoriesNames = categories.filter(cat => cat.get('selected')).map(cat => cat.get('name'));
-
+    const { pages } = this.props;
     return (
       <div className="article-list">
         {

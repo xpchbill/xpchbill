@@ -3,9 +3,17 @@
     max-width: 650px;
     margin: 0 auto;
     > h1 {
-      color: #f66;
-      margin: 10px 0 50px;
-      line-height: 1.3em;
+      margin: 10px 0 10px;
+      line-height: 1.2em;
+    }
+    > p {
+      margin: 0;
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 50px;
+      > span {
+        margin: 0 10px 0;
+      }
     }
   }
   &-body {

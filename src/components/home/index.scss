@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background-position: 50% 50%;
+    background-position: 60% 10%;
     .main-content {
       display: flex;
       flex-wrap: wrap;
@@ -43,6 +43,7 @@
       background-size: cover;
       background-position: inherit;
       background-image: url(/bianfuxia.jpg);
+      background-color: #fff;
       image-rendering: pixelated;
       z-index: 1;
     }

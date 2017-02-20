@@ -1,16 +1,39 @@
 .article-list {
-  h3 {
-    margin: 0;
+  h2 {
+    margin: 0 0 10px;
     line-height: 1.3em;
+    > a {
+      color: #333;
+      &:hover {
+        color: #f33;
+      }
+    }
   }
   &-item {
-    margin-bottom: 50px;
-    p {
-      margin: 0;
+    position: relative;
+    padding: 30px 0;
+    .post-info {
+      color: #999;
+      margin: 0 0 16px;
+      &-split {
+        margin: 0 8px 0;
+      }
+      &.ms-Grid {
+        padding: 0;
+      }
+    }
+    &::after {
+      position: absolute;
+      bottom: 0px;;
+      left: 0;
+      content: " ";
+      width: 100%;
+      border-bottom: 1px solid #ddd;
     }
   }
   .post-body {
-    margin: 5px 0;
+    color: #666;
+    margin: 15px 0;
   }
   .post-author-date {
     color: #999;
