@@ -8,8 +8,10 @@ export default class Cover extends React.PureComponent {
     const { className, src, children } = this.props;
 
     return (
-      <div className={classnames('ui-comp-cover', className)} style={src ? { background: `url(${src})` } : {}} >
-        {children}
+      <div className={classnames('ui-comp-cover', className)} >
+        <div className="ui-comp-cover-before" style={src ? { backgroundImage: `url(${src})` } : {}} />
+        <div className="ui-comp-cover-content">{children}</div>
+        <div className="ui-comp-cover-after" />
       </div>
     );
   }

@@ -34,7 +34,7 @@ export class Blog extends React.PureComponent {
 
     return (
       <div className="blog">
-        <Cover className="blog-cover" src="/web-solutions.png">
+        <Cover className="blog-cover" src="/running.jpg">
           <h1>BLOG</h1>
           <FaviconMe className="blog-faviconme" styles={{ width: '120px', height: '120px', boxShadow: '0px 1px 1px 0px #bbb' }}>
             <div className="blog-icon-me-info">
