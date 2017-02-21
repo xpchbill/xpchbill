@@ -6,7 +6,7 @@ import Headroom from 'react-headroom';
 import { config } from 'config';
 /* eslint-enable */
 import FontFaceObserver from 'fontfaceobserver';
-import { parsePostedPages } from 'redux/actions';
+import { parsePostedPages } from 'shared/redux/actions';
 
 export class EntryPointTemplate extends React.Component {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../src/components/home';
+import Home from '../src/index/home';
 
 export default class Index extends React.Component {
   render() {

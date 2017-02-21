@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable';
-import reducerHandler from 'redux/utils/reducerHandler';
+import reducerHandler from 'shared/redux/utils/reducerHandler';
 
 import { parsePCT, filterPCT } from './helper';
 

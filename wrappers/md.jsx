@@ -2,9 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 // eslint-disable-next-line
 import { config } from 'config';
-import Article from '../src/components/blog/Article';
+import Article from 'index/blog/Article';
 
-import '../src/styles/markdown.scss';
+import 'shared/styles/markdown.scss';
 
 export default class MarkdownWrapper extends React.Component {
   render() {

@@ -1,0 +1,37 @@
+.blog {
+  &-cover {
+    height: 260px;
+    margin-bottom: 140px;
+    h1 {
+      color: #fff;
+      font-size: 48px;
+      z-index: 3;
+    }
+  }
+  &-faviconme {
+    display: flex;
+    margin-bottom: -120px;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    h3 {
+      margin: 0;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+  &-icon-me-info {
+    margin-bottom: -50px;
+  }
+  &-main {
+    margin: 20px auto;
+    max-width: 650px;
+  }
+}
+.ms-Panel-headerText {
+  font-weight: 500;
+}
+.fabric-categories-tags {
+  margin-top: 30px;
+}

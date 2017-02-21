@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable';
-import { acceptBlogPagesAction } from 'components/blog/actions';
+import { acceptBlogPagesAction } from 'index/blog/actions';
 
 export const ACCEPT_BLOG_PAGES = 'site/global/ACCEPT_BLOG_PAGES';
 

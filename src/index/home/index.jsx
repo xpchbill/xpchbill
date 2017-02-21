@@ -8,7 +8,7 @@ import { config } from 'config';
 /* eslint-enable */
 import { loadTheme } from '@microsoft/load-themed-styles/lib/index';
 
-import '../../styles/base.scss';
+import 'shared/styles/base.scss';
 import './index.scss';
 
 loadTheme({
@@ -31,7 +31,7 @@ export class Home extends React.Component {
           <main>
             <div className="main-content">
               <img src="/xiaochun.jpeg" alt="Bill Xiong" />
-              <h1>Bill Xiong</h1>
+              <h1>BILL XIONG</h1>
               <p>I build stuff. Mostly for the web.</p>
             </div>
           </main>

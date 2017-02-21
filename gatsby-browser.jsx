@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
-import store, { finalHistory } from './src/redux/store';
+import store, { finalHistory } from './src/shared/redux/store';
 
 // exports.wrapRootComponent = Root => (
 //   <Provider store={store}>
