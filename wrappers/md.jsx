@@ -9,12 +9,11 @@ import 'shared/styles/markdown.scss';
 export default class MarkdownWrapper extends React.Component {
   render() {
     const { route: { page: { data } } } = this.props;
-// debugger;
+    const dataPlace = data.place ? ` | ${data.place}` : '';
+    const dataTitle = data.title ? ` | ${data.title}` : '';
     return (
       <div className="markdown">
-        <Helmet
-          title={`${config.siteTitle} | ${data.title}`}
-        />
+        <Helmet title={`${config.siteTitle}${dataPlace}${dataTitle}`} />
         {
           (() => {
             switch (data.place) {

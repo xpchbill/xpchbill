@@ -1,8 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 // import { StickyContainer, Sticky } from 'react-sticky';
 import { Button } from 'office-ui-fabric-react/lib/Button';
 import { Panel } from 'office-ui-fabric-react/lib/Panel';
+
+/* eslint-disable */
+import { config } from 'config';
+/* eslint-enable */
 
 import Cover from 'shared/components/Cover';
 import FaviconMe from 'shared/components/FaviconMe';
@@ -36,6 +41,7 @@ export class Blog extends React.PureComponent {
 
     return (
       <div className="blog">
+        <Helmet title={`${config.siteTitle} | blog`} />
         <Cover className="blog-cover" src="/running.jpg">
           <h1>BLOG</h1>
           <FaviconMe className="blog-faviconme" styles={{ width: '120px', height: '120px', boxShadow: '0px 1px 1px 0px #bbb' }}>
