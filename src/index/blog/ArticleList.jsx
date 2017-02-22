@@ -28,14 +28,14 @@ const getArticleItem = (page) => {
             <div className="post-body">
               {
                 truncate(body.replace(/<[^>]*>/g, ''), {
-                  length: 160, omission: ' ...', separator: /,? +/
+                  length: 110, omission: ' ...', separator: /,? +/
                 })
               }
             </div>
             <div className="post-info ms-fontSize-m">
-              <span><b>分类: </b>{`${categories.join(',')}`}</span>
+              <span><b>Categories: </b>{`${categories.join(',')}`}</span>
               <span className="post-info-split">{' | '}</span>
-              <span><b>标签: </b>{`${tags.join(', ')}`}</span>
+              <span><b>Tags: </b>{`${tags.join(', ')}`}</span>
             </div>
           </div>
         </div>

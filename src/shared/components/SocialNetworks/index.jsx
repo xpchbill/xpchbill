@@ -1,32 +1,31 @@
 import React from 'react';
 import classnames from 'classnames';
-import Facebook from 'react-icons/lib/fa/facebook-square';
 import Github from 'react-icons/lib/fa/github';
 import GooglePlus from 'react-icons/lib/fa/google-plus-square';
 import GMail from 'react-icons/lib/fa/envelope';
+import Wechat from 'react-icons/lib/fa/wechat';
 
 import './index.scss';
 
 const networks = [
   {
-    title: 'Facebook address',
-    url: 'http://github.com/xpchbill',
-    icon: Facebook
-  },
-  {
-    title: 'Github address',
+    title: 'Github',
     url: 'http://github.com/xpchbill',
     icon: Github
   },
   {
-    title: 'G+ address',
+    title: 'G+',
     url: 'https://plus.google.com/u/0/106317325152824081785',
     icon: GooglePlus
   },
   {
-    title: 'gmail address',
+    title: 'Gmail',
     url: '',
     icon: GMail
+  },
+  {
+    title: 'Wechat: xxxx',
+    icon: Wechat
   }
 ];
 

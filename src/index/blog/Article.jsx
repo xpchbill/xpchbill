@@ -23,10 +23,10 @@ export default class Article extends React.Component {
               <p className="post-author-date ms-fontSize-s">
                 {`${moment(data.date).format('YYYY-MM-DD H:MM')}`}
                 <span>{' | '}</span>
-                <b>分类: </b>
+                <b>Categories: </b>
                 {`${data.categories}`}
                 <span>{' | '}</span>
-                <b>标签: </b>
+                <b>Tags: </b>
                 {`${data.tags.join(', ')}`}
               </p> : null
           }

@@ -46,7 +46,7 @@ export class Blog extends React.PureComponent {
           <h1>BLOG</h1>
           <FaviconMe className="blog-faviconme" styles={{ width: '120px', height: '120px', boxShadow: '0px 1px 1px 0px #bbb' }}>
             <div className="blog-icon-me-info">
-              <h3>BILL XIONG</h3>
+              <h4>BILL XIONG</h4>
             </div>
           </FaviconMe>
         </Cover>
@@ -62,7 +62,8 @@ export class Blog extends React.PureComponent {
               <ArticleTags tags={tags} />
             </div>
           </Panel>
-          <SocialNetworks styles={{ fontSize: '24px' }} />
+          <SocialNetworks styles={{ fontSize: '18px' }} />
+          <p className="blog-statistics">{'Total count: '}{pages.size}</p>
           <ArticleList pages={pages} tags={tags} categories={categories} />
         </div>
         <Button description="Opens the Sample Panel" onClick={() => this.showPanel()}>Open Panel</Button>
