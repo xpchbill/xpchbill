@@ -6,6 +6,8 @@ import { Panel } from 'office-ui-fabric-react/lib/Panel';
 
 import Cover from 'shared/components/Cover';
 import FaviconMe from 'shared/components/FaviconMe';
+import SocialNetworks from 'shared/components/SocialNetworks';
+
 import ArticleList from './ArticleList';
 import ArticleCategories from './ArticleCategories';
 import ArticleTags from './ArticleTags';
@@ -54,6 +56,7 @@ export class Blog extends React.PureComponent {
               <ArticleTags tags={tags} />
             </div>
           </Panel>
+          <SocialNetworks styles={{ fontSize: '24px' }} />
           <ArticleList pages={pages} tags={tags} categories={categories} />
         </div>
         <Button description="Opens the Sample Panel" onClick={() => this.showPanel()}>Open Panel</Button>

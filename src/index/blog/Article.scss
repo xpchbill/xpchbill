@@ -1,11 +1,12 @@
 .article {
-  .blog-cover {
-    height: 230px;
-    h1 {
-      margin-top: 30px;
+  max-width: 650px;
+  &-header {
+    text-align: center;
+    h4 {
+      margin: 30px 0 0;
     }
-    .blog-faviconme {
-      margin-top: 20px;
+    .social-networks {
+      margin: 0 0 10px;
     }
   }
   &-container {
@@ -13,17 +14,21 @@
     margin: 0 auto;
   }
   &-body {
-    margin: 0 auto;
-    max-width: 650px;
+    margin: 20px auto;
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     > h1 {
-      margin: 10px 0 60px;
+      margin: 0 0 10px;
       line-height: 1.2em;
+      text-align: center;
     }
     > p {
       margin: 0;
       font-size: 14px;
       color: #aaa;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
+      text-align: center;
       > span {
         margin: 0 10px 0;
       }

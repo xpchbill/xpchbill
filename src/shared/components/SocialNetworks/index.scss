@@ -1,0 +1,17 @@
+.social-networks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: #999;
+    border-bottom: 0;
+    margin: 0 15px;
+    &:hover, &:active {
+      color: #666;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

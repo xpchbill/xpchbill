@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import Cover from 'shared/components/Cover';
-import FaviconMe from 'shared/components/FaviconMe';
+import SocialNetworks from 'shared/components/SocialNetworks';
 // eslint-disable-next-line
 import { config } from 'config';
 
@@ -13,27 +12,25 @@ export default class Article extends React.Component {
 
     return (
       <div className="article article-container">
-        <Cover className="blog-cover" src="/running.jpg">
-          <h1>BLOG</h1>
-          <FaviconMe className="blog-faviconme" styles={{ width: '120px', height: '120px', boxShadow: '0px 1px 1px 0px #bbb' }}>
-            <div className="blog-icon-me-info">
-              <h3>BILL XIONG</h3>
-            </div>
-          </FaviconMe>
-        </Cover>
+        <div className="article-header">
+          <h4>BILL XIONG</h4>
+          <SocialNetworks styles={{ fontSize: '18px' }} />
+        </div>
         <div className="article-body">
+          <h1>{data.title}</h1>
           {
             data.categories ?
               <p className="post-author-date ms-fontSize-s">
-                {`时间: ${moment(data.date).format('YYYY-MM-DD H:MM')}`}
+                {`${moment(data.date).format('YYYY-MM-DD H:MM')}`}
                 <span>{' | '}</span>
-                {`分类: ${data.categories}`}
+                <b>分类: </b>
+                {`${data.categories}`}
                 <span>{' | '}</span>
-                {`标签: ${data.tags.join(', ')}`}
+                <b>标签: </b>
+                {`${data.tags.join(', ')}`}
               </p> : null
           }
-          <h1>{data.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: data.body }} />
+          <div className="markdown-body" dangerouslySetInnerHTML={{ __html: data.body }} />
         </div>
       </div>
     );

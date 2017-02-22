@@ -9,7 +9,7 @@ tags:
   - typography
 categories:
   - UI
-coverPhoto: null
+coverPhoto: "/running.jpg"
 ---
 **We believe the best way to bring personality and performance to websites and products is through great design and technology. Our goal is to make that process simple, by offering an intuitive and robust directory of open source designer web fonts. By using our extensive catalog, you can share and integrate typography into any design project seamlessly—no matter where you are in the world.**
 

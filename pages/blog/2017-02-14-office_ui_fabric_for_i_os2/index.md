@@ -9,7 +9,7 @@ tags:
   - office ui fabric for
 categories:
   - 前端
-coverPhoto: null
+coverPhoto: "/running.jpg"
 ---
 We're thrilled to announce the release of [Office UI Fabric for iOS](https://github.com/OfficeDev/Office-UI-Fabric-iOS). This is the first time we've brought the Office Design Language to a new platform. While it's not yet as full-featured as our web toolkit, this initial release includes core styles to lay the foundation: colors, typography, and simple components.
 

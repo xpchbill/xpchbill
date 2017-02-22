@@ -4,11 +4,13 @@
   flex-direction: column;
   > main {
     position: relative;
-    height: 550px;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     color: #fff;
+    padding-bottom: 30px;
     background-position: 60% 10%;
     .main-content {
       display: flex;
@@ -18,8 +20,8 @@
       z-index: 10;
     }
     img {
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       border: 5px solid #fff;
       border-radius: 50%;
       flex-shrink: 0;
@@ -27,6 +29,7 @@
     }
     h1 {
       color: #fff;
+      margin: 30px 0 5px;
     }
     p {
       color: #ccc;
@@ -56,6 +59,16 @@
       left: 0;
       background: rgba(56,62,71,0.84);
       z-index: 2;
+    }
+    .social-networks {
+      margin: 10px 0 0;
+      a {
+        color: #ccc;
+        margin: 0 25px;
+        &:hover {
+          color: #fff;
+        }
+      }
     }
   }
   > nav {

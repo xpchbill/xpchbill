@@ -1,42 +1,50 @@
 .markdown {
   display: flex;
-  strong, b {
-    color: #333;
-    font-weight: 500;
+  .unidentified-md {
+    text-align: center;
+    margin: auto;
   }
-  img {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  figure {
-    margin: 0;
-  }
-  h2, h3 {
-    position: relative;
-    line-height: 1.2em;
-    margin: 50px 0 0;
-    &::before {
-      content: "";
-      border-left: 4px solid #f66;
-      position: absolute;
-      left: -13px;
-      height: 85%;
-      top: 12%;
+  &-body {
+    strong, b {
+      color: #333;
+      font-weight: 500;
+      -webkit-font-smoothing: initial;
     }
-  }
-  pre {
-    font-size: 13px;
-    padding: 15px 25px;
-    background: #f6f6f6;
-  }
-  blockquote {
-    margin: 2em 0;
-    padding-left: 30px;
-    border-left: 5px solid #e6e6e6;
-  }
-  .language-js {
-    font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
+    img {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    figure {
+      margin: 0;
+    }
+    h2, h3 {
+      position: relative;
+      line-height: 1.2em;
+      margin: 50px 0 0;
+      -webkit-font-smoothing: initial;
+      &::before {
+        content: "";
+        border-left: 4px solid #f66;
+        position: absolute;
+        left: -13px;
+        height: 85%;
+        top: 12%;
+      }
+    }
+    pre {
+      font-size: 13px;
+      padding: 15px 25px;
+      background: #f6f6f6;
+    }
+    blockquote {
+      margin: 2em 0;
+      padding-left: 30px;
+      border-left: 5px solid #e6e6e6;
+    }
+    .language-js {
+      font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
+    }
   }
 }
 
