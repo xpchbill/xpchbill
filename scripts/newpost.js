@@ -23,7 +23,7 @@ prompt.get(['title'], (err, result) => {
     layout: 'post',
     draft: true,
     place: 'blog',
-    tags: ['blog', '.md'],
+    tags: null,
     categories: null,
     coverPhoto: null
   }

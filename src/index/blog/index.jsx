@@ -17,6 +17,8 @@ import ArticleList from './ArticleList';
 import ArticleCategories from './ArticleCategories';
 import ArticleTags from './ArticleTags';
 
+import { resetBlogPagesAction } from './actions';
+
 import './index.scss';
 
 export class Blog extends React.PureComponent {
@@ -26,6 +28,10 @@ export class Blog extends React.PureComponent {
     this.state = {
       showPanel: false
     };
+  }
+
+  componentWillUnmount() {
+    this.props.resetBlogPagesAction();
   }
 
   showPanel() {
@@ -80,6 +86,6 @@ export default connect(
     tags: state.blog.get('tags'),
     categories: state.blog.get('categories')
   }), {
-
+    resetBlogPagesAction
   }
 )(Blog);

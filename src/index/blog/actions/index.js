@@ -24,3 +24,8 @@ export const onTagChangeAction = (index, selected) => ({
     selected
   }
 });
+
+export const resetBlogPagesAction = () => (dispatch, getState) => {
+  const pages = getState().blog.getIn(['entities', 'pages']);
+  return dispatch(acceptBlogPagesAction(pages));
+};

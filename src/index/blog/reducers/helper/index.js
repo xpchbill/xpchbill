@@ -3,7 +3,18 @@ import { fromJS } from 'immutable';
 export const parsePCT = (pages) => {
   let tags = fromJS({});
   let categories = fromJS({});
-  const sortedPages = fromJS(pages).sortBy((page) => {
+  const sortedPages = fromJS(pages).map((page) => {
+    const tagsInData = page.getIn(['data', 'tags']);
+    const categoriesInData = page.getIn(['data', 'categories']);
+    let returnPage = page;
+    if (!tagsInData || !tagsInData.size) {
+      returnPage = returnPage.setIn(['data', 'tags'], fromJS(['others']));
+    }
+    if (!categoriesInData || !categoriesInData.size) {
+      returnPage = returnPage.setIn(['data', 'categories'], fromJS(['others']));
+    }
+    return returnPage;
+  }).sortBy((page) => {
     page.getIn(['data', 'tags']).forEach((cat) => {
       tags = tags.mergeWith((a, b) => {
         const count = b.get('count');
