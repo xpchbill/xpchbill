@@ -43,7 +43,6 @@ export default class SocialNetworks extends React.PureComponent {
               target="_blank"
               rel="noopener noreferrer"
               title={`Bill's ${network.title}`}
-              className="social-networks__icon"
               style={{ fontSize: '24px', ...styles }}
             >
               <network.icon />

@@ -1,0 +1,22 @@
+.ui-comp-nav {
+  position: fixed;
+  right: 15%;
+  bottom: 20px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  text-align: center;
+  a, span {
+    color: #999;
+    border-bottom: 0;
+    line-height: 40px;
+    cursor: pointer;
+    &:hover, &active {
+      color: #333;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

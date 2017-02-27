@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import Bars from 'react-icons/lib/fa/list-ul';
 // import { StickyContainer, Sticky } from 'react-sticky';
-import { Button } from 'office-ui-fabric-react/lib/Button';
 import { Panel } from 'office-ui-fabric-react/lib/Panel';
 
 /* eslint-disable */
 import { config } from 'config';
 /* eslint-enable */
 
+import Nav from 'shared/components/Nav';
 import Cover from 'shared/components/Cover';
 import FaviconMe from 'shared/components/FaviconMe';
 import SocialNetworks from 'shared/components/SocialNetworks';
@@ -50,12 +51,13 @@ export class Blog extends React.PureComponent {
         <Helmet title={`${config.siteTitle} | blog`} />
         <Cover className="blog-cover" src="/running.jpg">
           <h1>BLOG</h1>
-          <FaviconMe className="blog-faviconme" styles={{ width: '120px', height: '120px', boxShadow: '0px 1px 1px 0px #bbb' }}>
+          <FaviconMe className="blog-faviconme" styles={{ width: '100px', height: '100px', boxShadow: '0px 1px 1px 0px #bbb' }}>
             <div className="blog-icon-me-info">
               <h4>BILL XIONG</h4>
             </div>
           </FaviconMe>
         </Cover>
+        <Nav />
         <div className="blog-main">
           <Panel
             isOpen={this.state.showPanel}
@@ -69,12 +71,23 @@ export class Blog extends React.PureComponent {
             </div>
           </Panel>
           <SocialNetworks styles={{ fontSize: '18px' }} />
-          <p className="blog-statistics">{'Total count: '}{pages.size}</p>
+          <div className="blog-statistics ms-Grid">
+            <div className="ms-Grid-row">
+              <div className="ms-Grid-col ms-u-md10 ms-u-lg10">
+                {'Total count: '}{pages.size}
+              </div>
+              <div className="ms-Grid-col ms-u-md2 ms-u-lg2 blog-stc-bars">
+                <span
+                  onClick={() => this.showPanel()}
+                  title="Categories and Tags"
+                >
+                  <Bars />
+                </span>
+              </div>
+            </div>
+          </div>
           <ArticleList pages={pages} tags={tags} categories={categories} />
         </div>
-        <Button description="Opens the Sample Panel" onClick={() => this.showPanel()}>Open Panel</Button>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     );
   }
