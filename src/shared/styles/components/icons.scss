@@ -1,0 +1,117 @@
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FabricMDL2Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e710";
+}
+.icon-airplane:before {
+  content: "\e709";
+}
+.icon-arrow-left:before {
+  content: "\e72b";
+}
+.icon-arrow-right:before {
+  content: "\e72a";
+}
+.icon-arrow-up:before {
+  content: "\e74a";
+}
+.icon-ballute:before {
+  content: "\ed7e";
+}
+.icon-checklist:before {
+  content: "\ef74";
+}
+.icon-close:before {
+  content: "\e711";
+}
+.icon-cloud:before {
+  content: "\eb6a";
+}
+.icon-down:before {
+  content: "\e70d";
+}
+.icon-email:before {
+  content: "\e715";
+}
+.icon-fit:before {
+  content: "\e73e";
+}
+.icon-home:before {
+  content: "\e80f";
+}
+.icon-js:before {
+  content: "\ebf0";
+}
+.icon-laptop:before {
+  content: "\e770";
+}
+.icon-left:before {
+  content: "\e76b";
+}
+.icon-nav:before {
+  content: "\e700";
+}
+.icon-paint:before {
+  content: "\e790";
+}
+.icon-people-sign:before {
+  content: "\e779";
+}
+.icon-picture:before {
+  content: "\e7aa";
+}
+.icon-right:before {
+  content: "\e76c";
+}
+.icon-search:before {
+  content: "\e721";
+}
+.icon-settings:before {
+  content: "\e713";
+}
+.icon-skpy:before {
+  content: "\eb6f";
+}
+.icon-sun:before {
+  content: "\ec8a";
+}
+.icon-trash:before {
+  content: "\e74d";
+}
+.icon-trigon-left-empty:before {
+  content: "\e817";
+}
+.icon-unlock:before {
+  content: "\e785";
+}
+.icon-up:before {
+  content: "\e70e";
+}
+.icon-wechat:before {
+  content: "\f1d7";
+}
+.icon-weixin:before {
+  content: "\f1d7";
+}
+.icon-google-with-circle:before {
+  content: "\e900";
+}
+.icon-mail:before {
+  content: "\ea86";
+}
+.icon-mark-github:before {
+  content: "\f00a";
+}
