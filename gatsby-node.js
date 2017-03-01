@@ -33,5 +33,17 @@ exports.modifyWebpackConfig = (webpackConfig, env) => {
     }
     return config;
   });
+  webpackConfig.loader('file-loader', (cfg) => {
+    const config = cfg;
+    config.test = /\.(eot|ttf|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/;
+    config.loader = 'file?name=assets/fonts/[name].[ext]';
+    return config;
+  });
+  webpackConfig.loader('images', (cfg) => {
+    const config = cfg;
+    config.test = /\.(png|jpg|gif|svg)$/;
+    config.loader = 'file?name=assets/images/[name].[ext]';
+    return config;
+  });
   return webpackConfig;
 };

@@ -10,6 +10,8 @@ import { config } from 'config';
 import Nav from 'shared/components/Nav';
 import Cover from 'shared/components/Cover';
 
+import 'shared/assets/images/running.jpg';
+
 import ArticleList from './ArticleList';
 import ArticleCategories from './ArticleCategories';
 import ArticleTags from './ArticleTags';
@@ -45,7 +47,7 @@ export class Blog extends React.PureComponent {
     return (
       <div className="blog">
         <Helmet title={`${config.siteTitle} | blog`} />
-        <Cover className="blog-cover" src="/running.jpg" />
+        <Cover className="blog-cover" src="/assets/images/running.jpg" />
         <Nav />
         <div className="blog-main">
           <Panel

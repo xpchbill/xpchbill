@@ -11,6 +11,7 @@ import { loadTheme } from '@microsoft/load-themed-styles/lib/index';
 import SocialNetworks from 'shared/components/SocialNetworks';
 
 import 'shared/styles/base.scss';
+import 'shared/assets/images/me01.jpg';
 import './index.scss';
 
 loadTheme({
@@ -32,7 +33,7 @@ export class Home extends React.Component {
           </nav>
           <main>
             <div className="main-content">
-              <img src="/me01.jpg" alt="Bill Xiong" />
+              <img src="/assets/images/me01.jpg" alt="Bill Xiong" />
               <h1>BILL XIONG</h1>
               <p>I build stuff. Mostly for the web.</p>
               <SocialNetworks styles={{ fontSize: '42px' }} />
