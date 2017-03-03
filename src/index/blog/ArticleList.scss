@@ -4,8 +4,10 @@
     line-height: 1.3em;
     > a {
       color: #333;
-      &:hover {
-        color: #f33;
+      &:hover, &:active {
+        color: #23a1a3;
+        outline-width: 0;
+        border-bottom-color: #32a1a3;
       }
     }
   }

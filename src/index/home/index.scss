@@ -10,8 +10,8 @@
     justify-content: flex-end;
     align-items: center;
     color: #fff;
-    padding-bottom: 30px;
-    background-position: 60% 10%;
+    padding-bottom: 20px;
+    background-position: 10% 100%;
     .main-content {
       display: flex;
       flex-wrap: wrap;
@@ -29,12 +29,12 @@
     }
     h1 {
       color: #fff;
-      margin: 30px 0 5px;
+      margin: 30px 0 15px;
     }
     p {
       color: #ccc;
       margin: 0;
-      font-size: 20px;
+      font-size: 18px;
     }
     &::before {
       position: absolute;
@@ -45,7 +45,7 @@
       content: "";
       background-size: cover;
       background-position: inherit;
-      background-image: url(../../shared/assets/images/bianfuxia.jpg);
+      background-image: url(../../shared/assets/images/homepage.jpg);
       background-color: #fff;
       image-rendering: pixelated;
       z-index: 1;
@@ -57,7 +57,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(56,62,71,0.84);
+      background: linear-gradient(to left, rgba(56,62,71,0.75) 60%, rgba(56,62,71,0.35));
       z-index: 2;
     }
     .social-networks {

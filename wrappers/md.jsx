@@ -4,6 +4,9 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import Article from 'index/blog/Article';
 
+import Header from 'shared/components/Header';
+import SliderNav from 'shared/components/SliderNav';
+
 import 'shared/styles/markdown.scss';
 
 export default class MarkdownWrapper extends React.Component {
@@ -14,6 +17,8 @@ export default class MarkdownWrapper extends React.Component {
     return (
       <div className="markdown">
         <Helmet title={`${config.siteTitle}${dataPlace}${dataTitle}`} />
+        <Header />
+        <SliderNav />
         {
           (() => {
             switch (data.place) {

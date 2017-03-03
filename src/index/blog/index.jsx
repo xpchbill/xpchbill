@@ -7,10 +7,10 @@ import { Panel } from 'office-ui-fabric-react/lib/Panel';
 import { config } from 'config';
 /* eslint-enable */
 
-import Nav from 'shared/components/Nav';
-import Cover from 'shared/components/Cover';
+import Header from 'shared/components/Header';
+import SliderNav from 'shared/components/SliderNav';
 
-import 'shared/assets/images/running.jpg';
+import 'shared/assets/images/desktop5.png';
 
 import ArticleList from './ArticleList';
 import ArticleCategories from './ArticleCategories';
@@ -47,8 +47,8 @@ export class Blog extends React.PureComponent {
     return (
       <div className="blog">
         <Helmet title={`${config.siteTitle} | blog`} />
-        <Cover className="blog-cover" src="/assets/images/running.jpg" />
-        <Nav />
+        <Header />
+        <SliderNav />
         <div className="blog-main">
           <Panel
             isOpen={this.state.showPanel}

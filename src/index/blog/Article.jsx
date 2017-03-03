@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import SocialNetworks from 'shared/components/SocialNetworks';
 // eslint-disable-next-line
 import { config } from 'config';
 
@@ -11,12 +10,8 @@ export default class Article extends React.Component {
     const { route: { page: { data } } } = this.props;
 
     return (
-      <div className="article article-container">
+      <div className="article article-container layout-limit-with">
         <div className="article-header">
-          <h4>BILL XIONG</h4>
-          <SocialNetworks styles={{ fontSize: '18px' }} />
-        </div>
-        <div className="article-body">
           <h1>{data.title}</h1>
           <p className="post-author-date ms-fontSize-s">
             {`${moment(data.date).format('YYYY-MM-DD H:MM')}`}
@@ -27,6 +22,8 @@ export default class Article extends React.Component {
             <b>Tags: </b>
             {data.tags ? `${data.tags.join(', ')}` : 'others'}
           </p>
+        </div>
+        <div className="article-body">
           <div className="markdown-body" dangerouslySetInnerHTML={{ __html: data.body }} />
         </div>
       </div>

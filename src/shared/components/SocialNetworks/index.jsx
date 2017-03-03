@@ -15,7 +15,7 @@ export default class SocialNetworks extends React.PureComponent {
         <a href="https://plus.google.com/u/0/106317325152824081785" target="_blank" rel="noopener noreferrer">
           <span className="icon icon-google-with-circle" />
         </a>
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:xpchbill8@gmail.com" rel="noopener noreferrer">
           <i className="icon icon-mail" />
         </a>
       </div>

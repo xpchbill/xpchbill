@@ -1,0 +1,46 @@
+@import "~shared/styles/variables.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  padding: 10px 0;
+  background: rgba(3,131,135,0.95);
+  .layout-limit-with {
+    display: flex;
+  }
+  &-logo {
+    color: #fff;
+    font-size: 18px;
+    flex: 0 0 100px;
+    strong {
+      font-weight: 800;
+    }
+  }
+  &-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+    li {
+      display: flex;
+      margin: 0 15px;
+    }
+    a {
+      color: #d9f6f7;
+      border-bottom: 0;
+      margin-top: 3px;
+      .icon {
+        font-size: 20px;
+      }
+      &:hover {
+        color: #fff;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

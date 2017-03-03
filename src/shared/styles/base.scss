@@ -24,16 +24,19 @@ body {
   font-weight: 500;
 }
 a {
-  color: #f66;
+  color: #038387;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
   &:hover, &:active {
-    color: #f33;
+    color: #23a1a3;
     outline-width: 0;
-    border-bottom-color: #f33;
+    border-bottom-color: #32a1a3;
   }
 }
 p {
   margin: 1em 0;
+}
+.layout-limit-with {
+  width: 750px;
 }

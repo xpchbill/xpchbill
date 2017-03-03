@@ -1,17 +1,11 @@
 .blog {
+  padding-top: 120px;
   &-cover {
-    height: 240px;
+    height: 260px;
     align-items: center;
     margin-bottom: 100px;
-    // h1 {
-    //   color: #fff;
-    //   font-size: 48px;
-    //   margin-top: 35px;
-    //   z-index: 3;
-    //   text-shadow: 1px 1px 1px #888;
-    // }
     .ui-comp-cover-before {
-      background-position: 0 6%;
+      background-position: 0 60%;
     }
   }
   &-icon-me-info {
