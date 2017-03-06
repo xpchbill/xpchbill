@@ -25,7 +25,7 @@ export default class MarkdownWrapper extends React.Component {
               case 'blog':
                 return <Article {...this.props} />;
               default:
-                return <div className="unidentified-md" dangerouslySetInnerHTML={{ __html: data.body }} />;
+                return <div className="unidentified-md ms-u-slideUpIn20" dangerouslySetInnerHTML={{ __html: data.body }} />;
             }
           })()
         }

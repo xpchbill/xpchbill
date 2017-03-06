@@ -34,7 +34,7 @@ export class Home extends React.Component {
           <main>
             <div className="main-content">
               <img src="/assets/images/me01.jpg" alt="Bill Xiong" />
-              <h1>BILL XIONG</h1>
+              <h1>BILL.<span>XIONG</span></h1>
               <p>I build stuff. Mostly for the web.</p>
               <SocialNetworks styles={{ fontSize: '42px' }} />
             </div>

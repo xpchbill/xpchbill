@@ -25,8 +25,8 @@ const handlers = {
       const { sortedPages, tags, categories } = parsePCT(fromJS(pages));
       s.setIn(['entities', 'pages'], sortedPages);
       s.set('pages', sortedPages);
-      s.set('tags', tags.toList());
-      s.set('categories', categories.toList());
+      s.set('tags', tags.sort().toList());
+      s.set('categories', categories.sort().toList());
     });
   },
 

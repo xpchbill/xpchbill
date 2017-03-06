@@ -10,7 +10,7 @@ export default class Article extends React.Component {
     const { route: { page: { data } } } = this.props;
 
     return (
-      <div className="article article-container layout-limit-with">
+      <div className="article article-container layout-limit-with ms-u-slideUpIn20">
         <div className="article-header">
           <h1>{data.title}</h1>
           <p className="post-author-date ms-fontSize-s">

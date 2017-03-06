@@ -1,6 +1,7 @@
 @import "./fonts/roboto.css";
 @import "./fonts/fabricmdl2icons.css";
 
+@import "./variables/index.scss";
 @import "./components/index.scss";
 
 body {
@@ -37,6 +38,12 @@ a {
 p {
   margin: 1em 0;
 }
+.layout {
+
+}
 .layout-limit-with {
   width: 750px;
+}
+.ms-Overlay {
+  background-color: rgba(0,0,0,.4);
 }

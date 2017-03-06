@@ -49,12 +49,11 @@ export class Blog extends React.PureComponent {
         <Helmet title={`${config.siteTitle} | blog`} />
         <Header />
         <SliderNav />
-        <div className="blog-main">
+        <div className="blog-main ms-u-scaleUpIn100">
           <Panel
             isOpen={this.state.showPanel}
             isLightDismiss
             onDismiss={() => this.closePanel()}
-            headerText="Categories and Tags"
           >
             <div className="fabric-categories-tags">
               <ArticleCategories categories={categories} />

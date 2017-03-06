@@ -1,8 +1,6 @@
-@import "~shared/styles/variables.scss";
+@import "~shared/styles/variables/index.scss";
 
 .header {
-  position: fixed;
-  top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -17,7 +15,7 @@
     font-size: 18px;
     flex: 0 0 100px;
     strong {
-      font-weight: 800;
+      font-weight: 600;
     }
   }
   &-nav {
@@ -29,6 +27,12 @@
     li {
       display: flex;
       margin: 0 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .active {
+        transform: scale(1.2);
+      }
     }
     a {
       color: #d9f6f7;
