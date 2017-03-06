@@ -77,6 +77,7 @@ export default class Header extends React.PureComponent {
 
     // eslint-disable-next-line
     bodyStyles.overflowX = bodyStyles.overflowY = 'hidden';
+    window.scrollTo(0, 0);
   }
 
   unfixBody = () => {

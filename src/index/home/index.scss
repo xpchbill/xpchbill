@@ -1,3 +1,5 @@
+@import "~shared/styles/variables/index.scss";
+
 .landing {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +91,37 @@
       li {
         margin: 10px 30px;
         font-size: 24px;
+      }
+    }
+  }
+  @media screen and (max-width: $ms-screen-md-max) {
+    > main {
+      height: 400px;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+      h1 {
+        color: #ddd;
+        font-size: 18px;
+        margin: 30px 0 15px;
+        font-weight: 600;
+        span {
+          font-weight: 400;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
+      .social-networks {
+        font-size: 32px!important;
+      }
+    }
+    > nav {
+      .nav {
+        li {
+          font-size: 18px;
+        }
       }
     }
   }

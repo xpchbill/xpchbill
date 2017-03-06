@@ -1,10 +1,12 @@
 @import "~shared/styles/variables/index.scss";
 
+.headroom-wrapper {
+  z-index: 200;
+}
 .header {
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 100;
   padding: 10px 0;
   background: rgba(3,131,135,0.95);
   .layout-limit-with {

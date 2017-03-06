@@ -22,6 +22,15 @@
       transform: scale(1.2);
     }
   }
+  @media screen and (max-width: $ms-screen-md-max) {
+    .icon {
+      border: 1px solid #999;
+      border-radius: 50%;
+      padding: 8px;
+      font-size: 18px;
+      background: #fff;
+    }
+  }
   @media screen and (min-width: 1200px) {
     right: 15%;
   }
