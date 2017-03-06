@@ -6,6 +6,8 @@ import Article from 'index/blog/Article';
 
 import Header from 'shared/components/Header';
 import SliderNav from 'shared/components/SliderNav';
+import SocialNetworks from 'shared/components/SocialNetworks';
+import Copyright from 'shared/components/Copyright';
 
 import 'shared/styles/markdown.scss';
 
@@ -30,6 +32,8 @@ export default class MarkdownWrapper extends React.Component {
               }
             })()
           }
+          <SocialNetworks styles={{ fontSize: '22px' }} />
+          <Copyright />
         </div>
       </div>
     );

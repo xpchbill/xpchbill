@@ -9,6 +9,7 @@ import { config } from 'config';
 import { loadTheme } from '@microsoft/load-themed-styles/lib/index';
 
 import SocialNetworks from 'shared/components/SocialNetworks';
+import Copyright from 'shared/components/Copyright';
 
 import 'shared/styles/base.scss';
 import 'shared/assets/images/me01.jpg';
@@ -39,6 +40,7 @@ export class Home extends React.Component {
               <SocialNetworks styles={{ fontSize: '42px' }} />
             </div>
           </main>
+          <Copyright />
         </div>
       </DocumentTitle>
     );

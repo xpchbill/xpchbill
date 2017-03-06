@@ -17,7 +17,3 @@ export const parsePostedPages = pages => (dispatch) => {
     }
   });
 };
-
-export const testAction = () => {
-
-};

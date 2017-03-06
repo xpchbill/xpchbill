@@ -1,12 +1,10 @@
 .markdown {
   .unidentified-md {
-    text-align: center;
-    margin: auto;
+    margin: 60px auto;
   }
   &-body {
     strong, b {
       color: #333;
-      font-weight: 500;
       -webkit-font-smoothing: initial;
     }
     img {

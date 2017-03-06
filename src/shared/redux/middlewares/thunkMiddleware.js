@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default function thunkMiddleware() {
   return ({ dispatch, getState }) => {
     return next => action =>

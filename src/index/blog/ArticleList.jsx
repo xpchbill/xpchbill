@@ -33,9 +33,9 @@ const getArticleItem = (page) => {
               }
             </div>
             <div className="post-info ms-fontSize-m">
-              <span><b>Categories: </b>{`${categories.join(',')}`}</span>
+              <span>Categories: {`${categories.join(',')}`}</span>
               <span className="post-info-split">{' | '}</span>
-              <span><b>Tags: </b>{`${tags.join(', ')}`}</span>
+              <span>Tags: {`${tags.join(', ')}`}</span>
             </div>
           </div>
         </div>

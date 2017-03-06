@@ -9,6 +9,8 @@ import { config } from 'config';
 
 import Header from 'shared/components/Header';
 import SliderNav from 'shared/components/SliderNav';
+import Copyright from 'shared/components/Copyright';
+import SocialNetworks from 'shared/components/SocialNetworks';
 
 import 'shared/assets/images/desktop5.png';
 
@@ -63,7 +65,7 @@ export class Blog extends React.PureComponent {
           <div className="blog-statistics ms-Grid">
             <div className="ms-Grid-row">
               <div className="ms-Grid-col ms-u-sm10 ms-u-md10 ms-u-lg10">
-                {'Total count: '}{pages.size}
+                {'Articles: '}{pages.size}
               </div>
               <div className="ms-Grid-col ms-u-sm2 ms-u-md2 ms-u-lg2 blog-stc-bars">
                 <span
@@ -76,6 +78,8 @@ export class Blog extends React.PureComponent {
             </div>
           </div>
           <ArticleList pages={pages} tags={tags} categories={categories} />
+          <SocialNetworks styles={{ fontSize: '22px' }} />
+          <Copyright />
         </div>
       </div>
     );

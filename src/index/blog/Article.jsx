@@ -16,10 +16,10 @@ export default class Article extends React.Component {
           <p className="post-author-date ms-fontSize-s">
             {`${moment(data.date).format('YYYY-MM-DD H:MM')}`}
             <span>{' | '}</span>
-            <b>Categories: </b>
+            <span>Categories: </span>
             {`${data.categories || 'others'}`}
             <span>{' | '}</span>
-            <b>Tags: </b>
+            <span>Tags: </span>
             {data.tags ? `${data.tags.join(', ')}` : 'others'}
           </p>
         </div>

@@ -9,7 +9,7 @@ import './ArticleCategories.scss';
 export class ArticleCategories extends React.PureComponent {
   render() {
     const { categories } = this.props;
-// debugger;
+
     return categories ? (
       <div className="article-categories">
         <h3>Categories:</h3>

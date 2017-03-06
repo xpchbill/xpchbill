@@ -25,8 +25,11 @@ body {
 .header, h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
-.header, h1, h2, h3, h4, h5, h6, b, strong {
+.header, h1, h2, h3 {
   font-weight: 500;
+}
+h4, h5, h6, b, strong {
+  font-weight: 600;
 }
 a {
   color: #038387;
