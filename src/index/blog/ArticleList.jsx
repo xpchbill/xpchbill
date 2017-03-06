@@ -20,10 +20,10 @@ const getArticleItem = (page) => {
     <div className="article-list-item" key={path}>
       <div className="ms-Grid">
         <div className="ms-Grid-row">
-          <div className="ms-Grid-col ms-u-lg3">
+          <div className="ms-Grid-col ms-u-sm12 ms-u-md4 ms-u-lg3">
             <span className="post-info-date">{`${moment(date).format('MM/DD/YYYY H:MM')}`}</span>
           </div>
-          <div className="ms-Grid-col ms-u-lg9">
+          <div className="ms-Grid-col ms-u-sm12 ms-u-md8 ms-u-lg9">
             <h2><Link to={path}>{title}</Link></h2>
             <div className="post-body">
               {

@@ -12,6 +12,7 @@ body {
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   font: 16px/1.6 Arial, 'Microsoft YaHei';
+  box-sizing: border-box;
 }
 .Roboto--loaded {
   body {
@@ -41,8 +42,14 @@ p {
 .layout {
 
 }
+
 .layout-limit-with {
-  width: 750px;
+  width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: $ms-screen-md-max) {
+    width: calc(100% - 40px);
+  }
 }
 .ms-Overlay {
   background-color: rgba(0,0,0,.4);

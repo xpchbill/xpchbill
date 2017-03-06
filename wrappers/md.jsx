@@ -19,16 +19,18 @@ export default class MarkdownWrapper extends React.Component {
         <Helmet title={`${config.siteTitle}${dataPlace}${dataTitle}`} />
         <Header />
         <SliderNav />
-        {
-          (() => {
-            switch (data.place) {
-              case 'blog':
-                return <Article {...this.props} />;
-              default:
-                return <div className="unidentified-md ms-u-slideUpIn20" dangerouslySetInnerHTML={{ __html: data.body }} />;
-            }
-          })()
-        }
+        <div className="layout-limit-with">
+          {
+            (() => {
+              switch (data.place) {
+                case 'blog':
+                  return <Article {...this.props} />;
+                default:
+                  return <div className="unidentified-md ms-u-slideUpIn20" dangerouslySetInnerHTML={{ __html: data.body }} />;
+              }
+            })()
+          }
+        </div>
       </div>
     );
   }

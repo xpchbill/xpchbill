@@ -49,7 +49,7 @@ export class Blog extends React.PureComponent {
         <Helmet title={`${config.siteTitle} | blog`} />
         <Header />
         <SliderNav />
-        <div className="blog-main ms-u-scaleUpIn100">
+        <div className="blog-main layout-limit-with ms-u-scaleUpIn100">
           <Panel
             isOpen={this.state.showPanel}
             isLightDismiss
@@ -62,10 +62,10 @@ export class Blog extends React.PureComponent {
           </Panel>
           <div className="blog-statistics ms-Grid">
             <div className="ms-Grid-row">
-              <div className="ms-Grid-col ms-u-md10 ms-u-lg10">
+              <div className="ms-Grid-col ms-u-sm10 ms-u-md10 ms-u-lg10">
                 {'Total count: '}{pages.size}
               </div>
-              <div className="ms-Grid-col ms-u-md2 ms-u-lg2 blog-stc-bars">
+              <div className="ms-Grid-col ms-u-sm2 ms-u-md2 ms-u-lg2 blog-stc-bars">
                 <span
                   onClick={() => this.showPanel()}
                   title="Categories and Tags"

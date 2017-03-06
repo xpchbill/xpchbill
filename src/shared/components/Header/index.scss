@@ -18,12 +18,19 @@
       font-weight: 600;
     }
   }
+  > .icon {
+    cursor: pointer;
+    display: none;
+  }
   &-nav {
     display: flex;
-    list-style: none;
-    margin: 0;
     flex-grow: 1;
     justify-content: flex-end;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+    }
     li {
       display: flex;
       margin: 0 15px;
@@ -44,6 +51,71 @@
       &:hover {
         color: #fff;
         transform: scale(1.2);
+      }
+    }
+  }
+
+  @media screen and (max-width: $ms-screen-md-max) {
+    > .icon {
+      position: fixed;
+      top: 18px;
+      right: 25px;
+      display: inline-block;
+      z-index: 100;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .icon-nav {
+      color: #fff;
+    }
+    .mobial-menu-open {
+      display: flex;
+      > ul {
+        right: 0;
+      }
+    }
+    &-nav {
+      position: absolute;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      display: none;
+      background: rgba(0,0,0,0.65);
+      justify-content: flex-end;
+      > ul {
+        position: relative;
+        right: -240px;
+        width: 240px;
+        height: 100vh;
+        display: flex;
+        padding: 50px 0 0;
+        background: #fff;
+        flex-direction: column;
+        li {
+          padding: 10px 5px;
+          display: flex;
+          border-bottom: 1px solid #ddd;
+          &:last-child {
+            margin-right: 15px;
+          }
+          &:hover {
+            background: #eee;
+          }
+          .active {
+            transform: scale(1);
+          }
+        }
+      }
+      a {
+        color: #333;
+        flex-grow: 1;
+        &:hover {
+          color: #333;
+          transform: scale(1);
+        }
       }
     }
   }

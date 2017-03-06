@@ -17,26 +17,89 @@ export default class Header extends React.PureComponent {
     return <div className="header-logo"><strong>{'BILL.'}</strong>{'XIONG'}</div>;
   }
 
-  static getNavigation() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobialMenuOpen: false
+    };
+  }
+
+  componentDidMount() {
+    this.handleResizeWrapper = () => this.handleResize();
+    window.addEventListener('resize', this.handleResizeWrapper);
+  }
+
+  componentWillUnmount() {
+    this.unfixBody();
+    window.removeEventListener('resize', this.handleResizeWrapper);
+  }
+
+  getNavigation() {
+    const { mobialMenuOpen } = this.state;
     return (
-      <ul className="header-nav">
-        <li><Link to={prefixLink('/')} title="Home page">Home</Link></li>
-        <li><Link to={prefixLink('/blog/')} title="My articles" activeClassName="active">Blog</Link></li>
-        <li><Link to={prefixLink('/life/')} title="My life" activeClassName="active">Life</Link></li>
-        <li><Link to={prefixLink('/about/')} title="About me" activeClassName="active">About</Link></li>
-      </ul>
+      <div
+        onClick={(e) => {
+          this.toggleMenuOpen(!mobialMenuOpen);
+          e.stopPropagation();
+          e.preventDefault();
+        }}
+        className={classnames('header-nav', { 'mobial-menu-open': mobialMenuOpen })}
+      >
+        <ul>
+          <li><Link to={prefixLink('/')} title="Home page">Home</Link></li>
+          <li><Link to={prefixLink('/blog/')} title="My articles" activeClassName="active">Blog</Link></li>
+          <li><Link to={prefixLink('/life/')} title="My life" activeClassName="active">Life</Link></li>
+          <li><Link to={prefixLink('/about/')} title="About me" activeClassName="active">About</Link></li>
+        </ul>
+      </div>
     );
   }
 
+  handleResize() {
+    this.toggleMenuOpen(false);
+  }
+
+  toggleMenuOpen(mobialMenuOpen) {
+    this.setState({
+      mobialMenuOpen
+    });
+    if (mobialMenuOpen) {
+      this.fixBody();
+    } else {
+      this.unfixBody();
+    }
+  }
+  fixBody = () => {
+    const bodyStyles = document.body.style;
+    this.bodyOverflowX = bodyStyles.overflowX;
+    this.bodyOverflowY = bodyStyles.overflowY;
+    this.bodyPaddingRight = bodyStyles.paddingRight;
+
+    // eslint-disable-next-line
+    bodyStyles.overflowX = bodyStyles.overflowY = 'hidden';
+  }
+
+  unfixBody = () => {
+    const bodyStyles = document.body.style;
+    bodyStyles.overflowX = this.bodyOverflowX;
+    bodyStyles.overflowY = this.bodyOverflowY;
+    bodyStyles.paddingRight = this.bodyPaddingRight;
+  }
+
   render() {
+    const { mobialMenuOpen } = this.state;
     const { className } = this.props;
 
     return (
       <Headroom>
-        <div className={classnames('header', className)} >
+        <div className={classnames('header', className, { 'mobial-menu-open': mobialMenuOpen })}>
+          <i
+            className={classnames('icon', { 'icon-nav': !mobialMenuOpen, 'icon-close': mobialMenuOpen })}
+            onClick={() => this.toggleMenuOpen(!mobialMenuOpen)}
+          />
           <div className="layout-limit-with">
             {this.constructor.getNameLogo()}
-            {this.constructor.getNavigation()}
+            {this.getNavigation()}
           </div>
         </div>
       </Headroom>
