@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { Link } from 'react-router';
 
 import Headroom from 'react-headroom';
+import FaviconMe from 'shared/components/FaviconMe';
 
 /* eslint-disable */
 import { prefixLink } from 'gatsby-helpers';
@@ -14,7 +15,7 @@ import './index.scss';
 export default class Header extends React.PureComponent {
 
   static getNameLogo() {
-    return <div className="header-logo"><strong>{'BILL.'}</strong>{'XIONG'}</div>;
+    return <div className="header-logo"><FaviconMe styles={{ minWidth: '52px', minHeight: '52px' }} /><span><strong>{'BILL.'}</strong>{'XIONG'}</span></div>;
   }
 
   constructor(props) {

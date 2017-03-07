@@ -8,7 +8,7 @@ export default class SocialNetworks extends React.PureComponent {
     const { className, styles } = this.props;
 
     return (
-      <div className={classnames('social-networks', className)} style={{ fontSize: '24px', ...styles }}>
+      <div className={classnames('social-networks', className)} style={{ fontSize: '28px', ...styles }}>
         <a href="http://github.com/xpchbill" target="_blank" rel="noopener noreferrer">
           <i className="icon icon-mark-github" />
         </a>

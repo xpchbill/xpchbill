@@ -32,7 +32,7 @@ export default class MarkdownWrapper extends React.Component {
               }
             })()
           }
-          <SocialNetworks styles={{ fontSize: '22px' }} />
+          <SocialNetworks />
           <Copyright />
         </div>
       </div>

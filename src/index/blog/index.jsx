@@ -78,7 +78,7 @@ export class Blog extends React.PureComponent {
             </div>
           </div>
           <ArticleList pages={pages} tags={tags} categories={categories} />
-          <SocialNetworks styles={{ fontSize: '22px' }} />
+          <SocialNetworks />
           <Copyright />
         </div>
       </div>
