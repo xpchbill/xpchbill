@@ -1,14 +1,14 @@
 .article-list {
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   h2 {
     margin: 0 0 10px;
     line-height: 1.3em;
     > a {
       color: #333;
       &:hover, &:active {
-        color: #23a1a3;
+        color: #f33;
         outline-width: 0;
-        border-bottom-color: #32a1a3;
+        border-bottom-color: #f33;
       }
     }
   }

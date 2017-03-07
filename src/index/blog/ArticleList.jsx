@@ -1,18 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
 import moment from 'moment';
-import truncate from 'lodash/truncate';
+// import truncate from 'lodash/truncate';
 // eslint-disable-next-line
 import { config } from 'config';
 
 import './ArticleList.scss';
+
+// <div className="post-body">
+//   {
+//     truncate(body.replace(/<[^>]*>/g, ''), {
+//       length: 110, omission: ' ...', separator: /,? +/
+//     })
+//   }
+// </div>
 
 const getArticleItem = (page) => {
   const path = page.get('path');
   const data = page.get('data');
   const title = data.get('title');
   const date = data.get('date');
-  const body = data.get('body');
+  // const body = data.get('body');
   const tags = data.get('tags');
   const categories = data.get('categories');
 
@@ -25,13 +33,6 @@ const getArticleItem = (page) => {
           </div>
           <div className="ms-Grid-col ms-u-sm12 ms-u-md8 ms-u-lg9">
             <h2><Link to={path}>{title}</Link></h2>
-            <div className="post-body">
-              {
-                truncate(body.replace(/<[^>]*>/g, ''), {
-                  length: 110, omission: ' ...', separator: /,? +/
-                })
-              }
-            </div>
             <div className="post-info ms-fontSize-m">
               <span>Categories: {`${categories.join(',')}`}</span>
               <span className="post-info-split">{' | '}</span>

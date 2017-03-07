@@ -16,7 +16,7 @@ import 'shared/assets/images/me01.jpg';
 import './index.scss';
 
 loadTheme({
-  themePrimary: '#038387'
+  themePrimary: '#f66'
 });
 
 export class Home extends React.Component {

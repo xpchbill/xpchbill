@@ -32,14 +32,14 @@ h4, h5, h6, b, strong {
   font-weight: 600;
 }
 a {
-  color: #038387;
+  color: #f66;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
   &:hover, &:active {
-    color: #23a1a3;
+    color: #f33;
     outline-width: 0;
-    border-bottom-color: #32a1a3;
+    border-bottom-color: #f33;
   }
 }
 p {
