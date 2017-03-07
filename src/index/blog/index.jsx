@@ -53,7 +53,7 @@ export class Blog extends React.PureComponent {
         <SliderNav />
         <div className="blog-main layout-limit-with ms-u-scaleUpIn100">
           {
-            process.env.NODE_ENV !== 'production' ?
+            global.document ?
               <Panel
                 isOpen={this.state.showPanel}
                 isLightDismiss
