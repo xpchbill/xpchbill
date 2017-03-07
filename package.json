@@ -54,7 +54,7 @@
     "classnames": "^2.2.5",
     "fontfaceobserver": "^2.0.8",
     "front-matter": "^2.1.2",
-    "gatsby": "^0.12.34",
+    "gatsby": "^0.12.38",
     "highlight.js": "^9.9.0",
     "immutable": "^3.8.1",
     "load-themed-styles": "^1.2.0",

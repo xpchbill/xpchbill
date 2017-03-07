@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { createHistory } from 'history';
+import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll/lib/useScroll';
-import { applyRouterMiddleware, Router } from 'react-router';
-import store, { finalHistory } from './src/shared/redux/store';
+import { applyRouterMiddleware, Router, useRouterHistory } from 'react-router';
+import { configureStore } from './src/shared/redux/store';
+
+const history = useRouterHistory(createHistory)();
+const store = configureStore({}, history);
+const finalHistory = syncHistoryWithStore(history, store);
 
 exports.replaceDOMRenderer = ({ routes, defaultShouldUpdateScroll, onUpdate }) => (
     ReactDOM.render(// eslint-disable-line

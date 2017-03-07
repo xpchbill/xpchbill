@@ -52,16 +52,19 @@ export class Blog extends React.PureComponent {
         <Header />
         <SliderNav />
         <div className="blog-main layout-limit-with ms-u-scaleUpIn100">
-          <Panel
-            isOpen={this.state.showPanel}
-            isLightDismiss
-            onDismiss={() => this.closePanel()}
-          >
-            <div className="fabric-categories-tags">
-              <ArticleCategories categories={categories} />
-              <ArticleTags tags={tags} />
-            </div>
-          </Panel>
+          {
+            process.env.NODE_ENV !== 'production' ?
+              <Panel
+                isOpen={this.state.showPanel}
+                isLightDismiss
+                onDismiss={() => this.closePanel()}
+              >
+                <div className="fabric-categories-tags">
+                  <ArticleCategories categories={categories} />
+                  <ArticleTags tags={tags} />
+                </div>
+              </Panel> : null
+          }
           <div className="blog-statistics ms-Grid">
             <div className="ms-Grid-row">
               <div className="ms-Grid-col ms-u-sm10 ms-u-md10 ms-u-lg10">
