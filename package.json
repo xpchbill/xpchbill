@@ -7,7 +7,7 @@
     "start": "gatsby develop -p 3000",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "post": "babel-node ./scripts/newpost.js",
-    "build": "npm run lint && gatsby build",
+    "build": "npm run lint && gatsby build && npm run deploy",
     "build:ci": "npm run lint && npm run build",
     "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
