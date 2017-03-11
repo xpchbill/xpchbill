@@ -4,10 +4,12 @@
   "description": "Bill's blog",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
     "start": "gatsby develop -p 3000",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "post": "babel-node ./scripts/newpost.js",
+    "build": "gatsby build",
+    "build:ci": "npm run lint && npm run build",
+    "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
   "repository": {
