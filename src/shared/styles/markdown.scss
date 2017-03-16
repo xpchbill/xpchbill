@@ -1,3 +1,5 @@
+@import "./highlight/github.css";
+
 .markdown {
   .unidentified-md {
     margin: 60px auto;
@@ -41,7 +43,7 @@
       padding-left: 30px;
       border-left: 5px solid #e6e6e6;
     }
-    .language-js {
+    .language-js, .language-html {
       font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
     }
   }
@@ -59,99 +61,4 @@
 
 .rfc-page pre {
   font-family: inherit;
-}
-
-.hljs-comment,
-.hljs-quote {
-  color: #998;
-  font-style: italic;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #e96900;
-  font-weight: 400;
-}
-
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
-}
-
-.hljs-string,
-.hljs-doctag {
-  color: #42b983;
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: bold;
-}
-
-.hljs-subst {
-  font-weight: normal;
-}
-
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
-}
-
-.hljs-tag {
-  color: #2973b7;
-  font-weight: normal;
-  .hljs-name {
-    color: #2973b7;
-  }
-  .hljs-attr {
-    color: #e96900;
-  }
-}
-.hljs-name,
-.hljs-attribute {
-  color: #e96900;
-  font-weight: normal;
-}
-
-.hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
-
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
-}
-
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
-}
-
-.hljs-meta {
-  color: #999;
-  font-weight: bold;
-}
-
-.hljs-deletion {
-  background: #fdd;
-}
-
-.hljs-addition {
-  background: #dfd;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
 }

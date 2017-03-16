@@ -11,7 +11,7 @@ categories:
 coverPhoto: null
 ---
 
-Homebrew是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件，相当于linux下的apt-get、yum神器；Homebre可以在Mac上安装一些OS X没有的UNIX工具，Homebrew将这些工具统统安装到了 /usr/local/Cellar 目录中，并在 /usr/local/bin 中创建符号链接。
+`Homebrew` 是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件，相当于linux下的apt-get、yum神器；Homebre可以在Mac上安装一些OS X没有的UNIX工具，Homebrew将这些工具统统安装到了 /usr/local/Cellar 目录中，并在 /usr/local/bin 中创建符号链接。
 
 ## Homebrew的安装
 Homebrew的安装很简单，只需在终端下输入如下指令：
@@ -35,7 +35,7 @@ Homebrew安装成功后，会自动创建目录 /usr/local/Cellar 来存放Homeb
   - 完全卸载：brew uninstall –force FORMULA
 
 ## homebrew-cask
-但是还不够完美，因为homebrew本身可直接安装的应用程序不是很多，这时候我们就需要安装homebrew-caskhttp://caskroom.io/来完善下：
+但是还不够完美，因为homebrew本身可直接安装的应用程序不是很多，这时候我们就需要安装 [homebrew-cask](http://caskroom.io/) 来完善下：
 ```
 brew install caskroom/cask/brew-cask
 ```
@@ -47,7 +47,7 @@ brew cask install alfred
 brew cask install nodejs
 ...
 ```
-homebrew-cask提供的应用程序很多，但是都是稳定版本的，如果想要安装测试版的应用，你还需要安装homebrew-cask-versionshttps://github.com/caskroom/homebrew-versions：
+homebrew-cask提供的应用程序很多，但是都是稳定版本的，如果想要安装测试版的应用，你还需要安装 [homebrew-cask-versions](https://github.com/caskroom/homebrew-versions)：
 ```
 brew tap caskroom/versions
 ```
