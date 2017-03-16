@@ -30,13 +30,12 @@ export default class ArticleMeta extends React.PureComponent {
       <dl className="article-meta-tags">
         <dt>标签：</dt>
         {
-          tags.map((tg, i) => <dd key={tg}>{tg}</dd>)
+          tags.map(tg => <dd key={tg}>{tg}</dd>)
         }
       </dl> : null;
   }
 
   render() {
-    const { date } = this.props;
     return (
       <div className="article-meta">
         {this.getPostDate()}
