@@ -7,10 +7,10 @@ export default class ArticleMeta extends React.PureComponent {
   getPostDate() {
     const { date } = this.props;
     return date ?
-      <div className="article-meta-postdate">
-        <b>发布于：</b>
-        <span>{`${moment(date).format('YYYY-MM-DD H:MM')}`}</span>
-      </div> : null;
+      <dl className="article-meta-postdate">
+        <dt>发布于：</dt>
+        <dd>{`${moment(date).format('YYYY-MM-DD H:MM')}`}</dd>
+      </dl> : null;
   }
 
   getCategories() {
