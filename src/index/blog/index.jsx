@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import classnames from 'classnames';
 import { Panel } from 'office-ui-fabric-react/lib/Panel';
 
 /* eslint-disable */
@@ -32,7 +33,7 @@ export class Blog extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    this.props.resetBlogPagesAction();
+    // this.props.resetBlogPagesAction();
   }
 
   showPanel() {
@@ -45,7 +46,7 @@ export class Blog extends React.PureComponent {
 
   render() {
     const { pages, tags, categories } = this.props;
-
+// debugger;
     return (
       <div className="blog">
         <Helmet title={`${config.siteTitle} | blog`} />
@@ -68,14 +69,20 @@ export class Blog extends React.PureComponent {
           <div className="blog-statistics ms-Grid">
             <div className="ms-Grid-row">
               <div className="ms-Grid-col ms-u-sm10 ms-u-md10 ms-u-lg10">
-                {'Articles: '}{pages.size}
+                {'文章数: '}{pages.size}
               </div>
               <div className="ms-Grid-col ms-u-sm2 ms-u-md2 ms-u-lg2 blog-stc-bars">
                 <span
+                  className="filter-icon"
                   onClick={() => this.showPanel()}
-                  title="Categories and Tags"
+                  title="文章类型和标签过滤"
                 >
-                  <i className="icon icon-nav" />
+                  <i
+                    className={classnames('icon', 'icon-filter', {
+                      'ms-fontColor-red': categories.some(cat => !cat.get('selected')) ||
+                                                 tags.some(tg => !tg.get('selected'))
+                    })}
+                  />
                 </span>
               </div>
             </div>

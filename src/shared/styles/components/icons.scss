@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-add:before {
   content: "\e710";
 }
@@ -49,6 +50,9 @@
 .icon-fit:before {
   content: "\e73e";
 }
+.icon-google-with-circle:before {
+  content: "\e900";
+}
 .icon-home:before {
   content: "\e80f";
 }
@@ -60,6 +64,12 @@
 }
 .icon-left:before {
   content: "\e76b";
+}
+.icon-mail:before {
+  content: "\ea86";
+}
+.icon-mark-github:before {
+  content: "\f00a";
 }
 .icon-nav:before {
   content: "\e700";
@@ -106,12 +116,9 @@
 .icon-weixin:before {
   content: "\f1d7";
 }
-.icon-google-with-circle:before {
-  content: "\e900";
+.icon-filter:before {
+  content: "\e71c";
 }
-.icon-mail:before {
-  content: "\ea86";
-}
-.icon-mark-github:before {
-  content: "\f00a";
+.icon-funnel:before {
+  content: "\e71c";
 }

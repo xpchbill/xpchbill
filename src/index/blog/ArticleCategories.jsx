@@ -12,7 +12,7 @@ export class ArticleCategories extends React.PureComponent {
 
     return categories ? (
       <div className="article-categories">
-        <h3>Categories:</h3>
+        <h3>分类:</h3>
         {
           categories.map((cat, index) =>
             <Checkbox
