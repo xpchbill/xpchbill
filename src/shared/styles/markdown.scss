@@ -3,6 +3,7 @@
     margin: 60px auto;
   }
   &-body {
+    word-break: break-word;
     strong, b {
       color: #333;
       -webkit-font-smoothing: initial;
@@ -18,7 +19,7 @@
     h2, h3 {
       position: relative;
       line-height: 1.2em;
-      margin: 50px 0 0;
+      margin: 50px 0 20px;
       -webkit-font-smoothing: initial;
       &::before {
         content: "";

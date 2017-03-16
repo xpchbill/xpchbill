@@ -1,0 +1,48 @@
+@import "~shared/styles/variables/index.scss";
+
+.article-meta {
+  display: flex;
+  text-align: left;
+  color: #bbb;
+  font-size: 12px;
+  justify-content: left;
+  dl, dd {
+    margin: 0;
+    white-space: nowrap;
+  }
+  dt, b {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  > dl, > div {
+    display: flex;
+    &::after {
+      content: '|';
+      margin: 0 10px;
+    }
+  }
+  dd {
+    &::after {
+      content: ',';
+      margin: 0 5px 0 0;
+    }
+  }
+  > dl:last-child, dd:last-child {
+    &::after {
+      content: '';
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: $ms-screen-md-max) {
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: column;
+    > dl, > div {
+      display: flex;
+      &::after {
+        content: '';
+        margin: 0;
+      }
+    }
+  }
+}

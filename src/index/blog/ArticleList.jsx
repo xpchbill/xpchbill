@@ -5,6 +5,8 @@ import moment from 'moment';
 // eslint-disable-next-line
 import { config } from 'config';
 
+import ArticleMeta from 'shared/components/ArticleMeta';
+
 import './ArticleList.scss';
 
 // <div className="post-body">
@@ -34,9 +36,7 @@ const getArticleItem = (page) => {
           <div className="ms-Grid-col ms-u-sm12 ms-u-md8 ms-u-lg9">
             <h2><Link to={path}>{title}</Link></h2>
             <div className="post-info ms-fontSize-m">
-              <span>Categories: {`${categories.join(',')}`}</span>
-              <span className="post-info-split">{' | '}</span>
-              <span>Tags: {`${tags.join(', ')}`}</span>
+              <ArticleMeta categories={categories} tags={tags} />
             </div>
           </div>
         </div>
