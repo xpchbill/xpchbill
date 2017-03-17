@@ -38,6 +38,10 @@
       background: #f6f6f6;
       overflow: auto;
     }
+    p > code {
+      background: #fac5cd;
+      border-radius: 2px;
+    }
     blockquote {
       margin: 2em 0;
       padding-left: 30px;
