@@ -1,7 +1,14 @@
 .article-categories {
   margin-bottom: 40px;
   h3 {
-    margin: 0 0 18px;
+    padding: 0 0 10px;
     line-height: 1em;
+    border-bottom: 1px solid #ddd;
+    .ms-Checkbox {
+      .ms-Label {
+      font-size: 16px;
+      }
+      font-weight: 600;
+    }
   }
 }

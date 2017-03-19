@@ -5,8 +5,10 @@ import { parsePCT, filterPCT } from './helper';
 
 import {
   ACCEPT_BLOG_PAGES,
-  ON_TAG_CHANGE,
-  ON_CATEGORY_CHANGE
+  ON_CHANGE_CATEGORY,
+  ON_SELECT_ALL_CATEGORIES,
+  ON_CHANGE_TAG,
+  ON_SELECT_ALL_TAGS
 } from '../actions';
 
 const initialState = fromJS({
@@ -30,7 +32,25 @@ const handlers = {
     });
   },
 
-  [ON_TAG_CHANGE](state, { payload: { index, selected } }) {
+  [ON_CHANGE_CATEGORY](state, { payload: { index, selected } }) {
+    return state.withMutations((s) => {
+      s.setIn(['categories', index, 'selected'], selected || false);
+      const { pages, tags } = filterPCT(s.getIn(['entities', 'pages']), s.get('categories'), s.get('tags'));
+      s.set('tags', tags);
+      s.set('pages', pages);
+    });
+  },
+
+  [ON_SELECT_ALL_CATEGORIES](state, { payload: { selected } }) {
+    return state.withMutations((s) => {
+      s.set('categories', s.get('categories').map(cat => cat.set('selected', selected || false)));
+      const { pages, tags } = filterPCT(s.getIn(['entities', 'pages']), s.get('categories'), s.get('tags'));
+      s.set('tags', tags);
+      s.set('pages', pages);
+    });
+  },
+
+  [ON_CHANGE_TAG](state, { payload: { index, selected } }) {
     return state.withMutations((s) => {
       s.setIn(['tags', index, 'selected'], selected || false);
       const { pages, tags } = filterPCT(s.getIn(['entities', 'pages']), s.get('categories'), s.get('tags'));
@@ -39,9 +59,9 @@ const handlers = {
     });
   },
 
-  [ON_CATEGORY_CHANGE](state, { payload: { index, selected } }) {
+  [ON_SELECT_ALL_TAGS](state, { payload: { selected } }) {
     return state.withMutations((s) => {
-      s.setIn(['categories', index, 'selected'], selected || false);
+      s.set('tags', s.get('tags').map(cat => cat.set('selected', selected || false)));
       const { pages, tags } = filterPCT(s.getIn(['entities', 'pages']), s.get('categories'), s.get('tags'));
       s.set('tags', tags);
       s.set('pages', pages);
