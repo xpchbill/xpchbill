@@ -61,6 +61,7 @@ iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 185.50.10
 iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 203.195.120.68 -j DROP
 iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 203.195.122.124 -j DROP
 iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 52.58.40.163 -j DROP
+iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 18.162.38.241 -j DROP
 
 if [ $(iptables-save -t filter|grep easucks|wc -l) -gt 1 ]; then
     echo "Succeed!"
