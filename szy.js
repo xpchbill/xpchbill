@@ -33,36 +33,6 @@ iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 54.189.20
 iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 54.190.223.192/32 -j DROP
 iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 54.232.212.27/32 -j DROP
 
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 109.200.215.132 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 109.200.215.140 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 109.200.221.170 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 109.200.221.171 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.165.200 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.165.201 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.28.50 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.28.51 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.36.61 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.36.62 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.42.240 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 159.153.42.241 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 169.38.100.162 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 169.38.100.170 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 169.57.76.162 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 169.57.76.171 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 18.184.251.35 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 18.196.167.42 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 18.197.48.114 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 185.179.200.211 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 185.179.200.226 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 185.179.203.68 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 185.179.203.80 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 185.50.104.206 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 185.50.104.221 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 203.195.120.68 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 203.195.122.124 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 52.58.40.163 -j DROP
-iptables -t filter -A easucks-FORWARD -i $internal_interface -p udp -d 18.162.38.241 -j DROP
-
 if [ $(iptables-save -t filter|grep easucks|wc -l) -gt 1 ]; then
     echo "Succeed!"
     echo "The server region of FIFA20 has been locked to center Asia."
